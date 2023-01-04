@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <script src="vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <select v-model="craft">
+        <option>Programming 🧑‍💻</option>
+        <option>Cooking 🍳</option>
+        <option>Blinking 😜</option>
+        <option>Eating 🍴</option>
+        <option>Flying ✈️</option>
+        <option>Vue.js 😍</option>
+      </select>
+      <br /><br />
+      <span v-show="craft">I want to learn: {{ craft }}</span>
+    </div>
+  </body>
+</html>
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        craft: "",
+      };
+    },
+  });
+  app.mount("#app");
+</script>

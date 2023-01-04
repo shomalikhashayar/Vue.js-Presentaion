@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <script src="vue.global.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="app">
+        <h3>Message is: {{ message }}</h3>
+        <input v-model="message" placeholder="edit me" />
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        message: "vue.js",
+      };
+    },
+  });
+  app.mount("#app");
+</script>
+<style>
+  body {
+    background-color: azure;
+  }
+  #app {
+    text-align: center;
+  }
+  .wrapper {
+    background-color: rgb(158, 250, 215);
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border: 3px solid rgb(0, 0, 0);
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+</style>
